@@ -104,7 +104,7 @@
             /* display: flex; */
             justify-content: center;
             align-items: center;
-            text-align: center; 
+            text-align: center;
         }
 
         .overlay {
@@ -366,7 +366,7 @@
             padding: 2em;
             max-width: 1200px;
             margin: auto;
-            
+
         }
 
         .book-item {
@@ -500,11 +500,13 @@
         .hidden {
             display: none;
         }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -594,6 +596,7 @@
                 opacity: 0;
                 transform: translate(-50%, -60%);
             }
+
             to {
                 opacity: 1;
                 transform: translate(-50%, -50%);
@@ -622,15 +625,27 @@
 
         /* Mobile Layout */
         @media (max-width: 600px) {
-            header { padding: 1em; }
-            h1 { font-size: 2.5em; }
-            .poetry-title { font-size: 1.3em; }
-            .poem-excerpt { font-size: 1em; }
+            header {
+                padding: 1em;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .poetry-title {
+                font-size: 1.3em;
+            }
+
+            .poem-excerpt {
+                font-size: 1em;
+            }
         }
 
         .hidden {
             display: none;
         }
+
         .container1122 {
             max-width: 800px;
             margin: auto;
@@ -642,20 +657,24 @@
             overflow: hidden;
             animation: fadeIn 1s ease-in-out;
         }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         .header {
             text-align: center;
             margin-bottom: 30px;
         }
+
         .header h1 {
             font-size: 2.8em;
             color: #c3dfe5;
@@ -666,16 +685,19 @@
             border-bottom: 3px solid #c3dfe5;
             padding-bottom: 10px;
         }
+
         @keyframes slideIn {
             from {
                 transform: translateY(-20px);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
             }
         }
+
         .bio {
             margin-bottom: 20px;
             line-height: 1.8;
@@ -686,11 +708,13 @@
             background: #66a4ac;
             border-radius: 8px;
         }
+
         .photo {
             display: flex;
             justify-content: center;
             margin: 30px 0;
         }
+
         .photo img {
             border-radius: 40%;
             width: 160px;
@@ -699,13 +723,16 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             transition: transform 0.4s, box-shadow 0.4s;
         }
+
         .photo img:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
         }
+
         .contact {
             margin-top: 20px;
         }
+
         .contact h3 {
             margin-bottom: 15px;
             font-size: 2em;
@@ -714,20 +741,24 @@
             border-bottom: 2px solid #c3dfe5;
             padding-bottom: 10px;
         }
+
         .contact p {
             margin: 5px 0;
             transition: color 0.3s;
         }
+
         .contact a {
             color: #c3dfe5;
             text-decoration: none;
             transition: color 0.3s, text-shadow 0.3s;
         }
+
         .contact a:hover {
             color: #c3dfe5;
             text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
             text-decoration: underline;
         }
+
         .social-links {
             list-style-type: none;
             padding: 0;
@@ -735,18 +766,22 @@
             justify-content: center;
             margin: 10px 0;
         }
+
         .social-links li {
             margin: 0 15px;
             transition: transform 0.3s;
         }
+
         .social-links li:hover {
             transform: scale(1.1);
         }
+
         .accordion {
             border: 1px solid #c3dfe5;
             border-radius: 8px;
             margin: 20px 0;
         }
+
         .accordion-header {
             padding: 15px;
             background: #66a4ac;
@@ -757,9 +792,11 @@
             border-bottom: 1px solid #c3dfe5;
             transition: background 0.3s;
         }
+
         .accordion-header:hover {
             background: #4a787e;
         }
+
         .accordion-content {
             max-height: 0;
             overflow: hidden;
@@ -767,10 +804,12 @@
             transition: max-height 0.3s ease-out;
             padding: 0 15px;
         }
+
         .accordion-content p {
             padding: 15px 0;
             margin: 0;
         }
+
         .modal {
             display: none;
             position: fixed;
@@ -780,10 +819,11 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
             transition: opacity 0.3s ease;
         }
+
         .modal-content {
             background-color: #66a4ac;
             margin: 15% auto;
@@ -795,41 +835,50 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             animation: modalIn 0.5s ease-in-out;
         }
+
         @keyframes modalIn {
             from {
                 opacity: 0;
                 transform: translateY(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         .close {
             color: #c3dfe5;
             float: right;
             font-size: 28px;
             font-weight: bold;
         }
+
         .close:hover,
         .close:focus {
             color: #c3dfe5;
             text-decoration: none;
             cursor: pointer;
         }
+
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
             }
+
             .header h1 {
                 font-size: 2.2em;
             }
+
             .contact h3 {
                 font-size: 1.6em;
             }
+
             .bio {
                 font-size: 1em;
             }
+
             .photo img {
                 width: 140px;
                 height: 140px;
@@ -848,20 +897,24 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
             animation: fadeIn 0.5s ease-in-out;
         }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         .header {
             text-align: center;
             margin-bottom: 30px;
         }
+
         .header h1 {
             font-size: 2.5em;
             color: #c3dfe5;
@@ -871,6 +924,7 @@
             position: relative;
             display: inline-block;
         }
+
         .header h1:after {
             content: '';
             position: absolute;
@@ -883,40 +937,50 @@
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
+
         .header h1:hover:after {
             transform: scaleX(1);
         }
+
         .contact-form {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
+
         .form-field {
             display: flex;
             flex-direction: column;
         }
+
         .form-field label {
             margin-bottom: 5px;
             font-weight: bold;
             color: #c3dfe5;
             font-size: 1.1em;
         }
-        .form-field input, .form-field textarea {
+
+        .form-field input,
+        .form-field textarea {
             padding: 15px;
             border: 2px solid #c3dfe5;
             border-radius: 8px;
             font-size: 1em;
             transition: border-color 0.3s, transform 0.3s;
         }
-        .form-field input:focus, .form-field textarea:focus {
-            border-color: #c3dfe5 ;
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            border-color: #c3dfe5;
             outline: none;
             transform: scale(1.02);
         }
+
         .form-field textarea {
             resize: none;
             height: 150px;
         }
+
         .submit-btn {
             background-color: #66a4ac;
             color: white;
@@ -929,16 +993,19 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             font-weight: bold;
         }
+
         .submit-btn:hover {
             background-color: #4a787e;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
+
         .additional-info {
             margin-top: 30px;
             text-align: center;
             color: #c3dfe5;
         }
+
         .additional-info h3 {
             margin-bottom: 15px;
             font-size: 1.5em;
@@ -946,33 +1013,41 @@
             border-bottom: 2px solid #c3dfe5;
             padding-bottom: 5px;
         }
-        .additional-info p, .additional-info a {
+
+        .additional-info p,
+        .additional-info a {
             margin: 5px 0;
             color: #c3dfe5;
             text-decoration: none;
             transition: color 0.3s;
         }
+
         .additional-info a:hover {
             color: #c3dfe5;
             text-decoration: underline;
         }
+
         .footer {
             margin-top: 40px;
             text-align: center;
             font-size: 0.9em;
             color: #c3dfe5;
         }
+
         @media (max-width: 600px) {
             .header h1 {
                 font-size: 2em;
             }
+
             .submit-btn {
                 width: 100%;
             }
-            .container2211{
+
+            .container2211 {
                 width: 70%;
             }
         }
+
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -986,23 +1061,26 @@
             background: #f1f1f1;
         }
 
-/* ------------------------------Footer------------------------------ */
+        /* ------------------------------Footer------------------------------ */
 
 
-        
+
         footer {
             background-color: #66a4ac;
             color: #c3dfe5;
             padding: 40px 20px;
             text-align: center;
         }
+
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .social-links {
             margin-bottom: 20px;
         }
+
         .social-links a {
             color: #c3dfe5;
             margin: 0 15px;
@@ -1010,22 +1088,27 @@
             font-size: 18px;
             transition: color 0.3s, transform 0.3s;
         }
+
         .social-links a:hover {
             color: #c3dfe5;
             transform: scale(1.1);
         }
+
         .footer-info {
             font-size: 14px;
             margin-top: 20px;
         }
+
         .footer-info a {
             color: #c3dfe5;
             text-decoration: none;
             transition: color 0.3s;
         }
+
         .footer-info a:hover {
             text-decoration: underline;
         }
+
         @media (max-width: 600px) {
             .social-links a {
                 display: block;
@@ -1038,6 +1121,7 @@
             display: flex;
             height: 60vh;
         }
+
         .box55 {
             width: 50%;
             display: flex;
@@ -1050,11 +1134,45 @@
         }
 
         .box1 {
-            background-color: #3498db;
+            background-color: #ffffff;
+            color: #66a4ac;
+            text-align: right;
         }
 
         .box2 {
-            background-color: #e74c3c;
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 1267px) {
+            .khasaais-img {
+                width: 450px;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .container55 img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+
+        .box1 {
+            font-size: 16px;
+            /* Default font size for smaller screens */
+        }
+
+        @media (min-width: 768px) {
+            .box1 {
+                font-size: 20px;
+                /* Larger text size for tablets and larger screens */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .box1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -1087,50 +1205,60 @@
 
 
 
-    
+
     <main>
 
 
-<center>
-        <section class="hero">
-            <div class="overlay"></div>
-            <nav class="navbar">
-                <!-- <div class="logo"><img
+        <center>
+            <section class="hero">
+                <div class="overlay"></div>
+                <nav class="navbar">
+                    <!-- <div class="logo"><img
                         src="logo without bg.png"
                         alt="error" style="width: 50px; height: 50px;"></div> -->
-                <button class="toggle-btn" id="toggle-btn">
-                    &#9776;
-                </button>
-                <ul class="nav-links" id="nav-links"><br>
-                    <li><a href="contact.html">رابطہ</b></a></li>
-                    <li><a href="about.html">ہمارے بارے میں</a></li>
-                    <li><a href="writers.html">تصنیف نگار/ شعراء</a></li><br>
-                    <li><a href="poetry.html">شاعری</a></li>
-                    <li><a href="articles.html">مقالات</a></li>
-                    <li><a href="book.html">كتب</a></li>
-                    
-                </ul>
-                <div class="logo"><a href="index.html"><img src="logo without bg.png"alt="error" style="width: 80px; height: 80px;"></a></div>
-            </nav>
-        
-<br><br><br><br><br><br><br><br><br><br>
+                    <button class="toggle-btn" id="toggle-btn">
+                        &#9776;
+                    </button>
+                    <ul class="nav-links" id="nav-links"><br>
+                        <li><a href="contact.html">رابطہ</b></a></li>
+                        <li><a href="about.html">ہمارے بارے میں</a></li>
+                        <li><a href="writers.html">تصنیف نگار/ شعراء</a></li><br>
+                        <li><a href="poetry.html">شاعری</a></li>
+                        <li><a href="articles.html">مقالات</a></li>
+                        <li><a href="book.html">كتب</a></li>
+
+                    </ul>
+                    <div class="logo"><a href="index.html"><img src="logo without bg.png" alt="error"
+                                style="width: 80px; height: 80px;"></a></div>
+                </nav>
+
+                <br><br><br><br><br><br><br><br><br><br>
 
 
 
-            <div class="hero-content">
-                <h1 class="hero-title" > بزم حسینی میں خوش آمدید</h1>
-                <h1 class="hero-tagline">.آپ کے علمی و ادبی سفر کا بہترین ساتھی</h1>
-                <a href="#khasaais"><button class="hero-button" id="nextBtn">Explore Now</button></a>
-            </div>
-        </section>
+                <div class="hero-content">
+                    <h1 class="hero-title"> بزم حسینی میں خوش آمدید</h1>
+                    <h1 class="hero-tagline">.آپ کے علمی و ادبی سفر کا بہترین ساتھی</h1>
+                    <a href="#khasaais"><button class="hero-button" id="nextBtn">Explore Now</button></a>
+                </div>
+            </section>
 
-</center><br>
-<center><h1 id="Khasaais">Khasaais</h1></center><br>
-<div class="container55">
-    <div class="box55 box1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus facilis voluptatum quidem ipsam placeat dolor saepe doloribus ipsa eligendi? Unde quis cupiditate deleniti voluptatum ducimus debitis quisquam qui est, repellendus ratione consequuntur dolore placeat veritatis, sint natus quae illum saepe veniam delectus inventore? Debitis rerum ab cum doloribus accusantium numquam dignissimos pariatur blanditiis ratione at cupiditate commodi nam eos voluptatum soluta, voluptatibus corrupti non iure voluptate illo officia! Ab voluptate eligendi quis illo asperiores non esse quia? In, ducimus rem.</div>
+        </center><br>
+        <center>
+            <h1 id="Khasaais">Khasaais</h1>
+        </center><br>
 
-    <div class="box55 box2"><img src="" alt=""></div>
-</div>
+        <div class="container55">
+            <div class="box55 box1">خصائص الحسینیه ایسی کتاب ہے جو کچھ لوگوں میں خاص تقدس کی حامل مانی جاتی ہیں، امام
+                حسین علیہ السلام کے قیام کی تاریخی روایت نہیں بلکہ ان کی شخصیت کا گہرا جائزہ ہے۔ اس لحاظ سے یہ کتاب ایک
+                منفرد اور نئی کوشش ہے۔ مصنف نے امام حسین علیہ السلام کی وہ خصوصیات جو عام طور پر ان کے قیام اور عاشور کے
+                دن شہادت کے بیان میں سامنے آتی ہیں، دریافت کی ہیں اور ان پہلوؤں پر روشنی ڈالی ہے جن پر پہلے کبھی بات
+                نہیں ہوئی</div>
+                <a href="khasais.html"><button class="khasais-button">Explore Now</button></a>
+                
+            <div class="box55 box2"><a href="khasais.html"><img src="Khasaais.png" alt="" style="width: 450px;"
+                        class="khasaais-img"></a></div>
+        </div>
 
 
 
@@ -1192,7 +1320,7 @@
         </div> -->
 
 
-<br><br>
+        <br><br>
 
 
 
@@ -1253,7 +1381,9 @@
                 <p>Brief description of book 2.</p>
             </div>
         </section>
-        <center><a href="books.html"><p>More▼</p></a></center>
+        <center><a href="books.html">
+                <p>More▼</p>
+            </a></center>
 
         <section id="book-detail" class="hidden">
             <button onclick="hideBookDetail()">Close</button>
@@ -1317,7 +1447,9 @@
                 </div>
             </div>
         </section>
-        <center><a href="poetry.html"><p>More▼</p></a></center>
+        <center><a href="poetry.html">
+                <p>More▼</p>
+            </a></center>
 
         <section id="poem-detail" class="hidden">
             <button onclick="hidePoemDetail()">Close</button>
@@ -1329,7 +1461,7 @@
             <div id="related-links"></div>
         </section>
 
-        
+
 
 
         <header>
@@ -1372,7 +1504,9 @@
                 </div>
             </div>
         </section>
-        <center><a href="artical.html"><p>More▼</p></a></center>
+        <center><a href="artical.html">
+                <p>More▼</p>
+            </a></center>
 
         <section id="poem-detail" class="hidden">
             <button onclick="hidePoemDetail()">Close</button>
@@ -1395,13 +1529,14 @@
             <div class="photo">
                 <img src="logo without bg.png" alt="Author's Photo">
             </div>
-        
+
             <div class="bio">
-                <p>Your biography goes here. Share your background, writing journey, and inspirations. Include how you started writing, any notable achievements, and what motivates your work.</p>
+                <p>Your biography goes here. Share your background, writing journey, and inspirations. Include how you
+                    started writing, any notable achievements, and what motivates your work.</p>
             </div>
-        
-            
-        
+
+
+
             <div class="contact">
                 <h3>Contact Us</h3>
                 <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
@@ -1411,24 +1546,26 @@
                     <li><a href="https://facebook.com/yourfacebookpage" target="_blank">Facebook</a></li>
                 </ul>
             </div>
-        
+
             <!-- Modal Section -->
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Extended Biography</h2>
-                    <p>Detailed biography or more extensive information goes here. This modal can be used to showcase your achievements, milestones, or significant life events in a more focused way.</p>
+                    <p>Detailed biography or more extensive information goes here. This modal can be used to showcase
+                        your achievements, milestones, or significant life events in a more focused way.</p>
                 </div>
             </div>
-        
-            <button id="modalBtn" style="margin: 20px auto; display: block; padding: 10px 20px; border: none; border-radius: 5px; background-color: #66a4ac; color: #c3dfe5; font-size: 1.2em; cursor: pointer; transition: background 0.3s;">
+
+            <button id="modalBtn"
+                style="margin: 20px auto; display: block; padding: 10px 20px; border: none; border-radius: 5px; background-color: #66a4ac; color: #c3dfe5; font-size: 1.2em; cursor: pointer; transition: background 0.3s;">
                 Read More About Us
             </button>
         </div>
 
-<br><br><br>
+        <br><br><br>
 
-<!-- <div class="container2211">
+        <!-- <div class="container2211">
         <form class="contact-form" action="submit_contact.php" method="POST">
             <div class="form-field">
                 <label for="name">Name</label>
@@ -1510,9 +1647,9 @@
                 navbar.classList.remove('scrolled');
             }
         });
-        document.getElementById('nextBtn').addEventListener('click', function() {
-      document.getElementById('Khasaais').scrollIntoView({ behavior: 'smooth' });
-    });
+        document.getElementById('nextBtn').addEventListener('click', function () {
+            document.getElementById('Khasaais').scrollIntoView({ behavior: 'smooth' });
+        });
     </script>
     <script>
         // function buttonClick() {
@@ -1525,9 +1662,9 @@
         //         behavior: 'smooth'
         //     });
         // });
-        document.getElementById('nextBtn').addEventListener('click', function() {
-      document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
-    });
+        document.getElementById('nextBtn').addEventListener('click', function () {
+            document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
+        });
     </script>
     <script>
         function showBookDetail(bookId) {
@@ -1678,21 +1815,21 @@
                 content.style.maxHeight = isOpen ? null : content.scrollHeight + "px"; // Toggle max height
             });
         });
-    
+
         // Modal Functionality
         const modal = document.getElementById("myModal");
         const btn = document.getElementById("modalBtn");
         const span = document.getElementsByClassName("close")[0];
-    
-        btn.onclick = function() {
+
+        btn.onclick = function () {
             modal.style.display = "block";
         }
-    
-        span.onclick = function() {
+
+        span.onclick = function () {
             modal.style.display = "none";
         }
-    
-        window.onclick = function(event) {
+
+        window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
