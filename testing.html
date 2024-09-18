@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Icons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: flex-end; /* Align content to the right */
+            align-items: center; /* Center content vertically */
+            height: 100vh;
+            background: linear-gradient(135deg, #e2e2e2, #f9f9f9); /* Softer gradient background */
+            margin: 0;
+            padding-right: 50px; /* Right padding for aesthetics */
+            overflow: hidden; /* Hide scrollbars */
+        }
+
+        .social-media-container {
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+            align-items: flex-end; /* Align items to the right */
+            position: relative; /* Position for child elements */
+            transition: all 0.3s ease; /* Smooth transition for the container */
+        }
+
+        .social-media-item {
+            display: flex; /* Use flex to align icon and name */
+            align-items: center; /* Center vertically */
+            margin: 15px 0; /* Space between items */
+            cursor: pointer;
+            padding: 12px 20px; /* Padding for better click area */
+            background-color: #ffffff; /* Background color for better visibility */
+            border-radius: 50px; /* More rounded corners for a modern look */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+            width: 260px; /* Fixed width for consistent layout */
+            position: relative; /* Positioning for hover effect */
+            left: 250px; /* Initial position off-screen */
+            opacity: 0; /* Hidden by default */
+            transition: left 0.5s ease, opacity 0.5s ease, transform 0.3s ease; /* Smooth transitions */
+        }
+
+        .social-media-container:hover .social-media-item {
+            left: 0; /* Move into view on hover */
+            opacity: 1; /* Show the item */
+            transform: translateY(0); /* Reset vertical position on hover */
+        }
+
+        .social-media-icon {
+            font-size: 36px; /* Icon size */
+            color: #555; /* Icon color */
+            transition: transform 0.3s ease, color 0.3s ease; 
+        }
+
+        .social-media-name {
+            font-size: 20px; /* Font size for the name */
+            color: #333; /* Text color */
+            margin-left: 15px; /* Space between icon and name */
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s; /* Fade-in effect */
+        }
+
+        .social-media-item:hover .social-media-icon {
+            transform: scale(1.3); /* Slightly enlarge icon on hover */
+            color: #007bff; /* Change color on hover */
+        }
+
+        .social-media-item:hover .social-media-name {
+            opacity: 1; /* Show name on hover */
+        }
+
+        /* Tooltip styles */
+        .tooltip {
+            position: absolute;
+            bottom: 100%; /* Position above the item */
+            left: 50%; /* Center the tooltip */
+            transform: translateX(-50%); /* Centering fix */
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+            color: #fff; /* Light text color */
+            padding: 5px 10px; /* Padding for tooltip */
+            border-radius: 5px; /* Rounded corners for tooltip */
+            font-size: 14px; /* Font size for tooltip */
+            white-space: nowrap; /* Prevent wrapping */
+            visibility: hidden; /* Hidden by default */
+            opacity: 0; /* Hidden by default */
+            transition: visibility 0s, opacity 0.3s ease; /* Fade-in effect */
+            z-index: 10; /* Ensure tooltip appears above other elements */
+        }
+
+        .social-media-item:hover .tooltip {
+            visibility: visible; /* Show tooltip on hover */
+            opacity: 1; /* Fade in tooltip */
+        }
+
+        /* Active state for accessibility */
+        .social-media-item:focus {
+            outline: 3px solid #007bff; /* Focus outline for accessibility */
+            outline-offset: 3px; /* Offset for clarity */
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            body {
+                padding-right: 20px; /* Reduce right padding on small screens */
+            }
+
+            .social-media-item {
+                width: 220px; /* Smaller width for mobile */
+                padding: 10px; /* Adjust padding for mobile */
+                font-size: 16px; /* Adjust font size for mobile */
+            }
+        }
+
+        /* Media queries for improved aesthetics */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #1f1f1f, #3a3a3a); /* Dark mode gradient */
+            }
+            .social-media-item {
+                background-color: #444; /* Darker item background */
+            }
+            .social-media-name,
+            .social-media-icon {
+                color: #fff; /* Light text color */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="social-media-container">
+        <p style="color: #66a4ac; font-size: larger;">Social media ▼</p>
+        <div class="social-media-item" tabindex="0" aria-label="Visit Facebook">
+            <div class="social-media-icon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="social-media-name">Facebook</div>
+            <div class="tooltip">Visit us on Facebook</div>
+        </div>
+        <div class="social-media-item" tabindex="0" aria-label="Visit Twitter">
+            <div class="social-media-icon">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="social-media-name">Twitter</div>
+            <div class="tooltip">Follow us on Twitter</div>
+        </div>
+        <div class="social-media-item" tabindex="0" aria-label="Visit Instagram">
+            <div class="social-media-icon">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="social-media-name">Instagram</div>
+            <div class="tooltip">Check out our Instagram</div>
+        </div>
+</body>
+</html>

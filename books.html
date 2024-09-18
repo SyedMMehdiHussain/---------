@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بزم حسینی</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo without bg.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #88d3ce;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .submit-btn {
+                font-size: 1em;
+            }
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #66a4ac;
+            padding: 1rem;
+            position: relative;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links li a {
+            color: #c3dfe5;
+            background-color: #66a4ac;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: -1px;
+        }
+
+        .nav-links li a:hover {
+            background-color: #5a9299;
+            transform: scale(1.05);
+        }
+
+        .toggle-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: #c3dfe5;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav .logo {
+            margin-top: 6px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #5a9299;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                transition: max-height 0.3s ease;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .toggle-btn {
+                display: block;
+            }
+        }
+        footer {
+            background-color: #66a4ac;
+            color: #c3dfe5;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .social-links {
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            color: #c3dfe5;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .social-links a:hover {
+            color: #c3dfe5;
+            transform: scale(1.1);
+        }
+        .footer-info {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .footer-info a {
+            color: #c3dfe5;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .social-links a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- <div class="logo"><img
+                src="logo without bg.png"
+                alt="error" style="width: 50px; height: 50px;"></div> -->
+        <button class="toggle-btn" id="toggle-btn">
+            &#9776;
+        </button>
+        <ul class="nav-links" id="nav-links"><br>
+            <li><a href="contact.html">رابطہ</b></a></li><br>
+            <li><a href="about.html">ہمارے بارے میں</a></li><br>
+            <li><a href="writers.html">تصنیف نگار/ شعراء</a></li><br>                      
+            <li><a href="poetry.html">شاعری</a></li><br>
+            <li><a href="articles.html">مقالات</a></li><br>
+            <li><a href="book.html">كتب</a></li><br>
+            
+        </ul>
+        <div class="logo"><a href="index.html"><img src="logo without bg.png"alt="error" style="width: 80px; height: 80px;"></a></div>
+    </nav>
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="social-links">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">LinkedIn</a>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2024 بزم حسینی. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Toggle navigation links
+    document.getElementById('toggle-btn').addEventListener('click', function () {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('active');
+    });
+
+    // Change navbar background on scroll
+    window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 0) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    
+</script>
+<script>
+    // Button click interaction
+    function buttonClick() {
+        alert('Welcome to بزم حسینی!');
+    }
+
+    // Optional: Smooth scroll for sections
+    document.querySelector('.hero-button').addEventListener('click', function () {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+</script>
+</body>
+</html>

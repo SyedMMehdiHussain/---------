@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بزم حسینی</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo without bg.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #88d3ce;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .submit-btn {
+                font-size: 1em;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #66a4ac;
+            padding: 1rem;
+            position: relative;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links li a {
+            color: #c3dfe5;
+            background-color: #66a4ac;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: -1px;
+        }
+
+        .nav-links li a:hover {
+            background-color: #5a9299;
+            transform: scale(1.05);
+        }
+
+        .toggle-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: #c3dfe5;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav .logo {
+            margin-top: 6px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #5a9299;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                transition: max-height 0.3s ease;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .toggle-btn {
+                display: block;
+            }
+        }
+
+        footer {
+            background-color: #66a4ac;
+            color: #c3dfe5;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: #c3dfe5;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #c3dfe5;
+            transform: scale(1.1);
+        }
+
+        .footer-info {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .footer-info a {
+            color: #c3dfe5;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .social-links a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        .container1122 {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+            background: #66a4ac;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            color: #c3dfe5;
+            margin: 0;
+            animation: slideIn 0.5s ease-in-out;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 3px solid #c3dfe5;
+            padding-bottom: 10px;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .bio {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.1em;
+            opacity: 0.9;
+            padding: 20px;
+            border-left: 6px solid #c3dfe5;
+            background: #66a4ac;
+            border-radius: 8px;
+        }
+
+        .photo {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .photo img {
+            border-radius: 40%;
+            width: 160px;
+            height: 160px;
+            border: 5px solid #c3dfe5;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        .photo img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact {
+            margin-top: 20px;
+        }
+
+        .contact h3 {
+            margin-bottom: 15px;
+            font-size: 2em;
+            color: #333;
+            animation: fadeIn 0.5s ease-in-out;
+            border-bottom: 2px solid #c3dfe5;
+            padding-bottom: 10px;
+        }
+
+        .contact p {
+            margin: 5px 0;
+            transition: color 0.3s;
+        }
+
+        .contact a {
+            color: #c3dfe5;
+            text-decoration: none;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .contact a:hover {
+            color: #c3dfe5;
+            text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            text-decoration: underline;
+        }
+
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .social-links li {
+            margin: 0 15px;
+            transition: transform 0.3s;
+        }
+
+        .social-links li:hover {
+            transform: scale(1.1);
+        }
+
+        .accordion {
+            border: 1px solid #c3dfe5;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .accordion-header {
+            padding: 15px;
+            background: #66a4ac;
+            color: #c3dfe5;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-align: center;
+            border-bottom: 1px solid #c3dfe5;
+            transition: background 0.3s;
+        }
+
+        .accordion-header:hover {
+            background: #4a787e;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            background: #4a787e;
+            transition: max-height 0.3s ease-out;
+            padding: 0 15px;
+        }
+
+        .accordion-content p {
+            padding: 15px 0;
+            margin: 0;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-content {
+            background-color: #66a4ac;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #c3dfe5;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: modalIn 0.5s ease-in-out;
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close {
+            color: #c3dfe5;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #c3dfe5;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2.2em;
+            }
+
+            .contact h3 {
+                font-size: 1.6em;
+            }
+
+            .bio {
+                font-size: 1em;
+            }
+
+            .photo img {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- <div class="logo"><img
+                src="logo without bg.png"
+                alt="error" style="width: 50px; height: 50px;"></div> -->
+        <button class="toggle-btn" id="toggle-btn">
+            &#9776;
+        </button>
+        <ul class="nav-links" id="nav-links"><br>
+            <li><a href="contact.html">رابطہ</b></a></li><br>
+            <li><a href="about.html">ہمارے بارے میں</a></li><br>
+            <li><a href="writers.html">تصنیف نگار/ شعراء</a></li><br>
+            <li><a href="poetry.html">شاعری</a></li><br>
+            <li><a href="articles.html">مقالات</a></li><br>
+            <li><a href="book.html">كتب</a></li><br>
+
+        </ul>
+        <div class="logo"><a href="index.html"><img src="logo without bg.png" alt="error"
+                    style="width: 80px; height: 80px;"></a></div>
+    </nav>
+
+
+
+
+
+    <br><br>
+
+    <main>
+        <div class="container1122">
+            <div class="header">
+                <h1>About</h1>
+            </div>
+            <div class="photo">
+                <img src="logo without bg.png" alt="Author's Photo">
+            </div>
+
+            <div class="bio">
+                <p>Your biography goes here. Share your background, writing journey, and inspirations. Include how you
+                    started writing, any notable achievements, and what motivates your work.</p>
+            </div>
+
+
+
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                <ul class="social-links">
+                    <li><a href="https://twitter.com/yourtwitterhandle" target="_blank">Twitter</a></li>
+                    <li><a href="https://instagram.com/yourinstagramhandle" target="_blank">Instagram</a></li>
+                    <li><a href="https://facebook.com/yourfacebookpage" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+
+            <!-- Modal Section -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Extended Biography</h2>
+                    <p>Detailed biography or more extensive information goes here. This modal can be used to showcase
+                        your achievements, milestones, or significant life events in a more focused way.</p>
+                </div>
+            </div>
+
+            <button id="modalBtn"
+                style="margin: 20px auto; display: block; padding: 10px 20px; border: none; border-radius: 5px; background-color: #66a4ac; color: #c3dfe5; font-size: 1.2em; cursor: pointer; transition: background 0.3s;">
+                Read More About Us
+            </button>
+        </div>
+    </main>
+
+    <br><br>
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2024 بزم حسینی. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle navigation links
+        document.getElementById('toggle-btn').addEventListener('click', function () {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+
+        // Change navbar background on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 0) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script>
+        // Button click interaction
+        function buttonClick() {
+            alert('Welcome to بزم حسینی!');
+        }
+
+        // Optional: Smooth scroll for sections
+        document.querySelector('.hero-button').addEventListener('click', function () {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <script>
+        // Accordion Functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const isOpen = content.style.maxHeight;
+                content.style.maxHeight = isOpen ? null : content.scrollHeight + "px"; // Toggle max height
+            });
+        });
+
+        // Modal Functionality
+        const modal = document.getElementById("myModal");
+        const btn = document.getElementById("modalBtn");
+        const span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
