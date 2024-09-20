@@ -9,6 +9,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="logo without bg.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -17,6 +21,10 @@
             background: white;
             min-height: 100vh;
             overflow-x: hidden;
+            font-family: "Noto Nastaliq Urdu", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
         }
 
         /* Custom Scrollbar */
@@ -265,47 +273,52 @@
 
         .btn-container {
             position: relative;
-  display: inline-block;
-  padding: 15px 20px;
-  background: linear-gradient(135deg, #c3dfe5, #88d3ce); /* Gradient background */
-  color: white;
-  font-weight: bold;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
-}
+            display: inline-block;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #c3dfe5, #88d3ce);
+            /* Gradient background */
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Soft shadow */
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth hover effects */
+        }
 
-.btn-wrapper {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 200px;
-  background-color: #fff;
-  padding: 10px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
+        .btn-wrapper {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 200px;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
 
-.btn11 {
-  display: block; /* Stack buttons vertically */
-  margin: 5px 0; /* Adds space between buttons */
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+        .btn11 {
+            display: block;
+            /* Stack buttons vertically */
+            margin: 5px 0;
+            /* Adds space between buttons */
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-.btn11:hover {
-  background-color: #0056b3;
-}
+        .btn11:hover {
+            background-color: #0056b3;
+        }
 
-.btn-container:hover .btn-wrapper {
-  display: block;
-}
+        .btn-container:hover .btn-wrapper {
+            display: block;
+        }
     </style>
 </head>
 
@@ -336,20 +349,17 @@
             <div class="btn-container">
                 ابواب
                 <div class="btn-wrapper">
-                  <button class="btn11" onclick="showContent(1)">پیش لفظ</button>
-                  <button class="btn11" onclick="showContent(2)">مقدمہ</button>
-                  <button class="btn11" onclick="showContent(3)">عنوان اول</button>
-                  <button class="btn11" onclick="showContent(4)">عنوان دوم</button>
-                  <button class="btn11" onclick="showContent(5)">عنوان سوم</button>
-                  <button class="btn11" onclick="showContent(6)">عنوان چہارم</button>
-                  <button class="btn11" onclick="showContent(7)">عنوان پنجم</button>
-                  <button class="btn11" onclick="showContent(8)">عنوان ششم</button>
+                    <button class="btn11" onclick="showContent(1)">پیش لفظ</button>
+                    <button class="btn11" onclick="showContent(2)">مقدمہ</button>
+                    <button class="btn11" onclick="showContent(3)">عنوان اول</button>
+                    <button class="btn11" onclick="showContent(4)">عنوان دوم</button>
+                    <button class="btn11" onclick="showContent(5)">عنوان سوم</button>
+                    <button class="btn11" onclick="showContent(6)">عنوان چہارم</button>
+                    <button class="btn11" onclick="showContent(7)">عنوان پنجم</button>
+                    <button class="btn11" onclick="showContent(8)">عنوان ششم</button>
                 </div>
-              </div>
+            </div>
         </center><br>
-
-
-
 
 
         <div id="content1" class="content active">
