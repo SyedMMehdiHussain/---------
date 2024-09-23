@@ -17,10 +17,6 @@
     <style>
         body {
             margin: 0;
-            font-family: "Noto Nastaliq Urdu", serif;
-            font-optical-sizing: auto;
-            font-weight: bold;
-            font-style: normal;
             background-color: #f4f4f4;
         }
 
@@ -132,8 +128,15 @@
             z-index: 2;
             color: #66a4ac;
             animation: fadeInUp 1.5s ease-in-out;
-            margin-top: -180px;
+            /* margin-top: -180px;  */
         }
+
+        @media (max-width: 350px) {
+            .hero-content {
+            margin-top: -140px; 
+        }
+        }
+
 
         .hero-title {
             font-size: 4rem;
@@ -1132,6 +1135,10 @@
         .container55 {
             display: flex;
             height: 60vh;
+            font-family: "Noto Nastaliq Urdu", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
         }
 
         .box55 {
@@ -1175,16 +1182,21 @@
             
         }
 
-        @media (min-width: 768px) {
+        @media (-width: 768px) {
             .box1 {
-                font-size: 20px;
+                font-size: 16px;
                 /* Larger text size for tablets and larger screens */
             }
         }
 
-        @media (min-width: 1024px) {
+        @media (width: 1024px) {
             .box1 {
-                font-size: 24px;
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 600px) {
+            .box1 {
+                font-size: 10px;
             }
         }
     </style>
@@ -1269,7 +1281,7 @@
                 نہیں ہوئی</div>
                 <!-- <a href="khasais.html"><button class="khasais-button">Explore Now</button></a> -->
                 
-            <div class="box55 box2"><a href="khasais.html"><img src="Khasaais.png" alt="" style="width: 450px;"
+            <div class="box55 box2"><a href="khasais-chapter-list.html"><img src="Khasaais.png" alt="" style="width: 450px;"
                         class="khasaais-img"></a></div>
         </div>
 
